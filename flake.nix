@@ -19,6 +19,7 @@
             python3
             python3Packages.pip
             python3Packages.virtualenv
+            nodePackages.cdktf-cli
             pipenv
             docker
             poetry
@@ -27,10 +28,6 @@
 
           shellHook = ''
             echo "Terraform CDK Python environment with Poetry activated"
-            if ! command -v cdktf &> /dev/null; then
-              echo "Installing cdktf-cli..."
-              npm install -g cdktf-cli
-            fi
             echo "Run 'cdktf --help' to see available commands"
             echo "Run 'poetry --version' to check Poetry installation"
             echo ""
